@@ -1,6 +1,8 @@
 
 @import "_header";
 $width-wrap: 1440px;
+$brec-point1: 900px;
+$brec-point2: 450px;
 $color-text-1: #008DCD;
 $color-text-1_1: #94D1EC;
 $color-text-2: #FFCC00;
@@ -18,7 +20,7 @@ body{
 	margin: 0;
 	font-family: "MyriadProRegular";
 	&.lock {
-		@media (max-width: 320px) {
+		@media (max-width: $brec-point2) {
 			overflow: hidden;
 		}
 	}
@@ -43,7 +45,7 @@ body{
 		background: #94D1EC;
 		
 	}
-	@media all and (max-width: 768px) {
+	@media all and (max-width: $brec-point1) {
 		width: 280px;
 		height: 48px;
 	}
@@ -65,7 +67,7 @@ body{
 		background: #FCE39C;
 		
 	}
-	@media all and (max-width: 768px) {
+	@media all and (max-width: $brec-point1) {
 		width:280px;
 	}
 }
@@ -80,14 +82,14 @@ body{
 	&_1{
 		@include font-common(48px, 58px);
 		font-family: "MyriadProBold";
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			@include font-common(44px, 53px);
 		}
 	}
 	&_2{
 		@include font-common(36px, 43px);
 		font-family: "MyriadProBold";
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			@include font-common(28px, 34px);
 		}
 	}
@@ -97,19 +99,19 @@ body{
 	}
 	&_4{
 		@include font-common(18px, 22px);
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			@include font-common(14px, 17px);
 		}
 	}
 	&_5{
 		@include font-common(16px, 19px);
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			@include font-common(14px, 17px);
 		}
 	}
 	&_6{
 		@include font-common(24px, 23px);
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			@include font-common(14px, 13px);
 		}
 	}
@@ -118,7 +120,7 @@ body{
 	}
 	&_8{
 		@include font-common(36px, 43px);
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			@include font-common(26px, 31px);
 		}
 	}
@@ -132,14 +134,13 @@ body{
 		&_4{color: #003675;}
 		&_5{color: #9E9E9E;}
 		&_6{color: #008DCD;}
-		
 	}
 	&_p{
 		@include font-common(16px, 19.2px);
 	}
 	&_p1{
 		@include font-common(20px, 24px);
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			@include font-common(18px, 21px);
 		}
 	}
@@ -157,12 +158,12 @@ body{
 	margin: 0 auto;
 	display: flex;
 	padding: 27px 140px 0 140px;
-	@media all and (max-width: 768px) {
-		width:768px;
+	@media all and (max-width: $brec-point1) {
+		max-width: 768px;
 		padding: 27px 30px 0 30px;
 	}
-	@media all and (max-width: 320px) {
-		width:320px;
+	@media all and (max-width: $brec-point2) {
+		max-width: 320px;
 		padding: 38px 21px 0 21px;
 	}
 }
@@ -174,12 +175,12 @@ body{
 		background-repeat: no-repeat; /* Отменяем повторение фона */
 		padding-top: 27px;
 		flex-direction: column;
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			height: 415px;
 			background-position: 70% 70%;
 			background-size: cover; /* Масштабируем фон */
 		}
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			height: 515px;
 			background-image: url(../img/bg1_3_320.png);
 			background-size: contain;
@@ -193,20 +194,21 @@ body{
 	}
 	&-h{
 		margin-top: 88px;
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			margin-top: 55px;
 			width: 400px;
 		}
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			margin-top: 242px;
 			@include font-common(32px, 38px);
 			color: #000000;
+			width: 280px;
 		}
 	}
 	&-h2{
 		margin-top: 22px;
 		margin-bottom: 40px;
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			margin-top: 11px;
     		margin-bottom: 18px;
 			@include font-common(24px, 29px);
@@ -219,7 +221,7 @@ body{
 		
 	}
 	&-menu{
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			position: fixed;
 			left: 0;
 			top: 74px;
@@ -242,11 +244,11 @@ body{
 		grid-column-gap: 50px;
 		text-align: center;
 		list-style: none;
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			grid-column-gap: 0px;
 			margin-top: 7px;
 		}
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			display: block;
 			text-align: left;
 			padding-left: 10px;
@@ -258,7 +260,7 @@ body{
 		&_link{
 			text-decoration: none;
 			transition: all 0.5s;
-			@media all and (max-width: 320px) {
+			@media all and (max-width: $brec-point2) {
 				color: #000000;
 			}
 			&:hover {
@@ -276,7 +278,7 @@ body{
 			@include font-common(18px, 22px);
 			margin: 0px 0px 10px 0px;
 		}
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			&.active{
 				display: block;
 			}
@@ -306,10 +308,9 @@ body{
 			background-color: rgba(0, 0, 0, 0.2);
 			backdrop-filter: blur(15px);
 			height: 100vh;
-			width: 320px;
+			width: $brec-point2;
 		}
 	}
-	
 	&-logo{
 		left: 140px;
 		top: 27px;
@@ -317,13 +318,13 @@ body{
 			width: 160px;
 			height: 46px;
 			background-image: url(../img/logo_138.png);
-			@media all and (max-width: 768px) {
+			@media all and (max-width: $brec-point1) {
 				width: 100px;
 				height: 29px;
 				background-image: url(../img/logo_100_29.png);
 			}
 			
-			@media all and (max-width: 320px) {
+			@media all and (max-width: $brec-point2) {
 				&.active{
 					width: 160px;
 					height: 46px;
@@ -338,10 +339,10 @@ body{
 	&-wrap{
 		height: 457px;
 		background: #F7F7F7;
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			height: 314px;
 		}
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			height: 371px;
 			flex-direction: column-reverse;
 			padding-top: 17px;
@@ -353,13 +354,13 @@ body{
 		height: 336px;
 		margin: 34px 0px 0px 62px;
 		background-image: url(../img/Group2.png);
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			width: 398px;
 			height: 203px;
 			background-image: url(../img/Group398_203.png);
 			margin: 59px 0 0 26px;
 		}
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			width: 278px;
 			height: 142px;
 			background-image: url(../img/Group2_320.png);
@@ -369,19 +370,19 @@ body{
 	}
 	&-col{
 		width: 460px;
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			width: 280px;
 		}
 	}
 	&-h{
 		margin-top: 90px;
 		margin-bottom: 22px;
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			@include font-common(36px, 43px);
 			width: 600px;
-			margin-top: 25px;
+			margin-top: 0px;
 		}
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			@include font-common(18px, 22px);
 			width: 280px;
 			margin-bottom: 10px;
@@ -389,7 +390,7 @@ body{
 	}
 	&-p{
 		margin-bottom: 40px;
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			@include font-common(12px, 14px);
 			margin-bottom: 15px;
 		}
@@ -400,8 +401,10 @@ body{
 		flex-wrap: wrap;
 		justify-content: space-between;
 		background: #FFFFFF;
-		padding: 0px 70px 0 70px;
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point1) {
+			padding: 0px 74px 0 74px;
+		}
+		@media all and (max-width: $brec-point2) {
 			padding: 0px 21px 0 21px;
 		}
 	}
@@ -418,7 +421,7 @@ body{
 		&:nth-child(4) .step-img{
 			background-image: url(../img/Asset6_4.png);
 		}
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			&:nth-child(1) .step-img{
 				background-image: url(../img/Asset3_4x.png);
 			}
@@ -438,12 +441,12 @@ body{
 		margin-top: 75px;
 		width: 460px;
 		height: 312px;
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			margin-top: 38px;
 			width: 280px;
 			height: 189px;
 		}
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			margin-top: 27px;
 		}
 	}
@@ -451,7 +454,7 @@ body{
 	&-h{
 		margin-top: 41px;
 		margin-bottom: 9px;
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			@include font-common(26px, 31px);
 			margin-top: 18px;
 		}
@@ -460,12 +463,12 @@ body{
 		width: 462px;
 		height: 93px;
 		margin-bottom: 32px;
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			@include font-common(16px, 19px);
 			width: 280px;
 			margin-bottom: 0px;
 		}
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			@include font-common(14px, 17px);
 			height: 58px;
 			
@@ -481,16 +484,16 @@ body{
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			@media all and (max-width: 320px) {
+			@media all and (max-width: $brec-point2) {
 				display: block;
 				padding-top: 23px;
 			}
 		}
 		&-h{
-			@media all and (max-width: 768px) {
+			@media all and (max-width: $brec-point1) {
 				width:380px;
 			}
-			@media all and (max-width: 320px) {
+			@media all and (max-width: $brec-point2) {
 				@include font-common(24px, 29px);
 				width:280px;
 				margin-bottom: 15px;
@@ -503,23 +506,26 @@ body{
 	.wrap{
 		height: 240px;
 		background: #008DCD;
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			height: 171px;
 		}
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			height: 283px;
 		}
 	}
 	&-h1{
 		margin: 0px 0px 13px 0;
 		text-transform: uppercase;
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			@include font-common(28px, 34px);
 			width: 360px;
 		}
+		@media all and (max-width: $brec-point2) {
+			width: 280px;
+		}
 	}
 	.shipment-rov1_col>P{
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			width: 290px;
 		}
 	}
@@ -535,11 +541,11 @@ body{
 		border-radius: 30px;
 		padding-left: 21px ;
 		cursor: pointer;
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			width:280px;
 			@include font-common(16px, 19px);
 		}
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			margin-top:14px;
 		}
 	}
@@ -547,7 +553,7 @@ body{
 		margin-top:16px;
 		display:flex;
 		align-items: center;
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			margin-top:5px;
 		}
 	}
@@ -564,7 +570,7 @@ body{
 	align-items: center;
 	background: rgba(0, 0, 0, 0.2);
 	backdrop-filter: blur(15px);
-	@media all and (max-width: 320px) {
+	@media all and (max-width: $brec-point2) {
 		max-width: 320px;
 	}
 	&.active{
@@ -609,11 +615,11 @@ body{
 		}
 		.h_9{
 			margin-bottom: 30px;
-			@media all and (max-width: 320px) {
+			@media all and (max-width: $brec-point2) {
 				@include font-common(16px, 19px);
 			}
 		}
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			width: 300px;
 			height: 310px;
 			.btn{
@@ -625,7 +631,7 @@ body{
 		margin: 0px auto 13px auto;
 		background:#FFFFFF;
 		border: 1px solid  #008DCD;
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			width: 280px;
 		}
 	}
@@ -636,14 +642,14 @@ body{
 		padding-top: 69px;
 		padding-bottom:  70px;
 		display: block;
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			width:768px;
 			padding-top: 48px;
 			>h2{
 				@include font-common(36px, 43px);
 			}
 		}
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			width:320px;
 			padding-top: 28px;
 			padding-bottom:  30px;
@@ -665,18 +671,18 @@ body{
 		&_col{
 			width: 460px;
 			padding-top: 45px;
-			@media all and (max-width: 768px) {
+			@media all and (max-width: $brec-point1) {
 				width: 280px;
 				padding-top: 25px;
 			}
-			@media all and (max-width: 320px) {
+			@media all and (max-width: $brec-point2) {
 				width: 230px;
 			}
 			>p{
-				@media all and (max-width: 768px) {
+				@media all and (max-width: $brec-point1) {
 					width: 280px;
 				}
-				@media all and (max-width: 320px) {
+				@media all and (max-width: $brec-point2) {
 					@include font-common(12px, 14px);
 					width: 230px;
 				}
@@ -686,7 +692,7 @@ body{
 				width: 160px;
 				height: 160px;
 				background-image: url(../img/image.jpg);
-				@media all and (max-width: 768px) {
+				@media all and (max-width: $brec-point1) {
 					background-image: url(../img/image2.jpg);
 					width: 100px;
 					height: 100px;
@@ -697,7 +703,7 @@ body{
 				width: 160px;
 				height: 160px;
 				background-image: url(../img/image1.jpg);
-				@media all and (max-width: 768px) {
+				@media all and (max-width: $brec-point1) {
 					background-image: url(../img/image2_1.jpg);
 					width: 100px;
 					height: 100px;
@@ -710,23 +716,23 @@ body{
 			&_c{
 				margin-left: 40px;
 				margin-bottom: 27px;
-				@media all and (max-width: 320px) {
+				@media all and (max-width: $brec-point2) {
 					margin-left: 25px;
 				}
 				p:nth-child(2) {
 					margin: 13px 0 13px 0;
-					@media all and (max-width: 768px) {
+					@media all and (max-width: $brec-point1) {
 						margin: 7px 0 7px 0;
 					}
 				}
 				p:nth-child(4) {
 					margin: 7px 0 7px 0;
-					@media all and (max-width: 768px) {
+					@media all and (max-width: $brec-point1) {
 						margin: 4px 0 4px 0;
 					}
 				}
 				p{
-					@media all and (max-width: 768px) {
+					@media all and (max-width: $brec-point1) {
 						@include font-common(10px, 12px);
 					}
 				}
@@ -744,7 +750,7 @@ body{
 				&:hover{
 					border-color: #008DCD;
 				}
-				@media all and (max-width: 768px) {
+				@media all and (max-width: $brec-point1) {
 					width: 12px;
 					height: 12px;
 				}
@@ -762,7 +768,7 @@ body{
 				&:hover{
 					border-color: #008DCD;
 				}
-				@media all and (max-width: 768px) {
+				@media all and (max-width: $brec-point1) {
 					width: 12px;
 					height: 12px;
 				}
@@ -778,17 +784,17 @@ body{
 		background-color: #F7F7F7;
 		padding-top: 100px;
 		display: block;
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			padding-top: 37px;
 			height: 314px;
 		}
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			padding-top: 23px;
 			height: 403px;
 		
 		}
 		.h2{
-			@media all and (max-width: 768px) {
+			@media all and (max-width: $brec-point1) {
 				@include font-common(36px, 43px);
 			}
 		}
@@ -798,7 +804,7 @@ body{
 		display: flex;
 		margin-top: 30px;
 		justify-content: space-between;
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			flex-wrap: wrap;
 			margin-top: 20px;
 		}
@@ -808,12 +814,12 @@ body{
 				width: 84px;
 				height: 49px;
 				background-image: url(../img/Layer3.png);
-				@media all and (max-width: 768px) {
+				@media all and (max-width: $brec-point1) {
 					width: 56px;
 					height: 32px;
 					background-image: url(../img/Layer3_1.png);
 				}
-				@media all and (max-width: 768px) {
+				@media all and (max-width: $brec-point1) {
 					width: 56px;
 					height: 32px;
 					background-image: url(../img/Layer3_1.png);
@@ -823,12 +829,12 @@ body{
 				width: 62px;
 				height: 76px;
 				background-image: url(../img/Layer1.png);
-				@media all and (max-width: 768px) {
+				@media all and (max-width: $brec-point1) {
 					width: 40px;
 					height: 48px;
 					background-image: url(../img/Layer1_1.png);
 				}
-				@media all and (max-width: 320px) {
+				@media all and (max-width: $brec-point2) {
 					width: 34px;
 					height: 40px;
 					background-image: url(../img/Layer1_320.png);
@@ -838,12 +844,12 @@ body{
 				width: 66px;
 				height: 66px;
 				background-image: url(../img/Layer6.png);
-				@media all and (max-width: 768px) {
+				@media all and (max-width: $brec-point1) {
 					width: 42px;
 					height: 42px;
 					background-image: url(../img/Layer6_1.png);
 				}
-				@media all and (max-width: 320px) {
+				@media all and (max-width: $brec-point2) {
 					width: 36px;
 					height: 36px;
 					background-image: url(../img/Layer6_320.png);
@@ -853,12 +859,12 @@ body{
 				width: 68px;
 				height: 61px;
 				background-image: url(../img/Layer5.png);
-				@media all and (max-width: 768px) {
+				@media all and (max-width: $brec-point1) {
 					width: 43px;
 					height: 37px;
 					background-image: url(../img/Layer5_1.png);
 				}
-				@media all and (max-width: 320px) {
+				@media all and (max-width: $brec-point2) {
 					width: 37px;
 					height: 32px;
 					background-image: url(../img/Layer5_320.png);
@@ -868,12 +874,12 @@ body{
 				width: 68px;
 				height: 66px;
 				background-image: url(../img/Layer2.png);
-				@media all and (max-width: 768px) {
+				@media all and (max-width: $brec-point1) {
 					width: 44px;
 					height: 43px;
 					background-image: url(../img/Layer2_1.png);
 				}
-				@media all and (max-width: 320px) {
+				@media all and (max-width: $brec-point2) {
 					width: 38px;
 					height: 36px;
 					background-image: url(../img/Layer2_320.png);
@@ -883,31 +889,31 @@ body{
 				width: 74px;
 				height: 58px;
 				background-image: url(../img/Layer4.png);
-				@media all and (max-width: 768px) {
+				@media all and (max-width: $brec-point1) {
 					width: 47px;
 					height: 36px;
 					background-image: url(../img/Layer4_1.png);
 				}
-				@media all and (max-width: 320px) {
+				@media all and (max-width: $brec-point2) {
 					width: 40px;
 					height: 31px;
 					background-image: url(../img/Layer4_320.png);
 				}
 			}
-			@media all and (max-width: 768px) {
+			@media all and (max-width: $brec-point1) {
 				width: 100px;
 			}
-			@media all and (max-width: 320px) {
+			@media all and (max-width: $brec-point2) {
 				width: 86px;
 				margin-bottom: 18px;
 			}
 			p{
 				text-align: center;
-				@media all and (max-width: 768px) {
+				@media all and (max-width: $brec-point1) {
 					@include font-common(12px, 14px);
 					width: 100px;
 				}
-				@media all and (max-width: 768px) {
+				@media all and (max-width: $brec-point2) {
 					@include font-common(10px, 12px);
 					width: 80px;
 				}
@@ -922,11 +928,11 @@ body{
 			border-radius: 80px;
 			background-color: #FFFFFF;
 			margin-bottom: 34px;
-			@media all and (max-width: 768px) {
+			@media all and (max-width: $brec-point1) {
 				width: 100px;
 				height: 100px;
 			}
-			@media all and (max-width: 320px) {
+			@media all and (max-width: $brec-point2) {
 				width: 86px;
 				height: 86px;
 				margin-bottom: 9px;
@@ -938,7 +944,7 @@ body{
 	&-img{
 		width: 84px;
 		height: 76px;
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			width: 56px;
 			height: 48px;
 		}	
@@ -950,13 +956,13 @@ body{
 		padding-bottom: 64px;
 		display: block;
 		
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			padding-top: 47px;
 			.h_2{
 				@include font-common(36px, 43px);
 			}
 		}
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			padding-top: 27px;
 			padding-bottom: 20px;
 			.h_2{
@@ -971,7 +977,7 @@ body{
 		justify-content: space-between;
 		.reviews_row_col1{
 			display: none;
-			@media all and (max-width: 320px) {
+			@media all and (max-width: $brec-point2) {
 				display: block;
 				padding-top: 24px;
 			}
@@ -987,12 +993,12 @@ body{
 				width: 75px;
 				height: 70px;
 				background-image: url(../img/Forma1.png);
-				@media all and (max-width: 768px) {
+				@media all and (max-width: $brec-point1) {
 					width: 46px;
 					height: 44px;
 					background-image: url(../img/Forma1x.png);
 				}
-				@media all and (max-width: 320px) {
+				@media all and (max-width: $brec-point2) {
 					width: 28px;
 					height: 26px;
 					background-image: url(../img/Forma1_320.png);
@@ -1002,12 +1008,12 @@ body{
 				width: 75px;
 				height: 82px;
 				background-image: url(../img/Forma3.png);
-				@media all and (max-width: 768px) {
+				@media all and (max-width: $brec-point1) {
 					width: 47px;
 					height: 52px;
 					background-image: url(../img/Forma3x.png);
 				}
-				@media all and (max-width: 320px) {
+				@media all and (max-width: $brec-point2) {
 					width: 28px;
 					height: 26px;
 					background-image: url(../img/Forma3_320.png);
@@ -1017,19 +1023,19 @@ body{
 				width: 67px;
 				height: 69px;
 				background-image: url(../img/Forma2.png);
-				@media all and (max-width: 768px) {
+				@media all and (max-width: $brec-point1) {
 					width: 49px;
 					height: 51px;
 					background-image: url(../img/Forma2x.png);
 				}
-				@media all and (max-width: 320px) {
+				@media all and (max-width: $brec-point2) {
 					width: 28px;
 					height: 26px;
 					background-image: url(../img/Forma2_320.png);
 				}
 			}
 									
-			@media all and (max-width: 768px) {
+			@media all and (max-width: $brec-point1) {
 				width: 224px;
 				.btn{
 					width: 220px;
@@ -1043,7 +1049,7 @@ body{
 					margin-bottom: 16px;
 				}
 			}
-			@media all and (max-width: 320px) {
+			@media all and (max-width: $brec-point2) {
 				width: 224px;
 				.btn{
 					width: 230px;
@@ -1066,12 +1072,12 @@ body{
 			border-radius: 80px;
 			background-color:  #F7F7F7;
 			margin-bottom: 32px;
-			@media all and (max-width: 768px) {
+			@media all and (max-width: $brec-point1) {
 				width: 100px;
 				height: 100px;
 				margin-bottom: 18px;
 			}
-			@media all and (max-width: 320px) {
+			@media all and (max-width: $brec-point2) {
 				width: 62px;
 				height: 62px;
 				margin-bottom: 0px;
@@ -1079,7 +1085,7 @@ body{
 
 		}
 		&_cul{
-			@media all and (max-width: 320px) {
+			@media all and (max-width: $brec-point2) {
 				display: flex;
 				align-items: center;
 				margin-bottom: 18px;
@@ -1095,14 +1101,14 @@ body{
 		display: block;
 		background-color: #D2ECF7;
 	
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			padding-top: 41px;
 			padding-bottom: 39px;
 			.h_2{
 				@include font-common(36px, 43px);
 			}
 		}
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			padding-top: 28px;
 			padding-bottom: 25px;			
 			.h_2{
@@ -1129,12 +1135,12 @@ body{
 		margin-bottom: 16px;
 		transition: all 0.5s;
 		justify-content: space-between;
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			width: 700px;
 			height: 48px;
 			
 		}
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			width: 278px;
 			height: 80px;
 			
@@ -1146,10 +1152,10 @@ body{
 		p{
 			width: 480px;
 			margin-right: 10px;
-			@media all and (max-width: 768px) {
+			@media all and (max-width: $brec-point1) {
 				width:580px;
 			}
-			@media all and (max-width: 320px) {
+			@media all and (max-width: $brec-point2) {
 				width:206px;
 			}
 		}
@@ -1169,7 +1175,7 @@ body{
 .company{
 	&-wrap{
 		padding-bottom: 27px;
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			padding-top: 16px;
 		}
 		h2{
@@ -1177,7 +1183,7 @@ body{
 		}
 	}
 	&_row{
-		width: 1160px;
+		width: 100%;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -1187,50 +1193,50 @@ body{
 		&_col{
 			&:nth-child(1) .company-img {
 				background-image: url(../img/bringo.png);
-				@media all and (max-width: 768px) {
+				@media all and (max-width: $brec-point1) {
 					background-image: url(../img/bringo1.png);
 				}
 			}
 			&:nth-child(2) .company-img {
 				background-image: url(../img/cdek.png);
-				@media all and (max-width: 768px) {
+				@media all and (max-width: $brec-point1) {
 					background-image: url(../img/cdek1.png);
 				}
 			}
 			&:nth-child(3) .company-img {
 				background-image: url(../img/city_express.png);
-				@media all and (max-width: 768px) {
+				@media all and (max-width: $brec-point1) {
 					background-image: url(../img/city_express1.png);
 				}
 			}
 			&:nth-child(4) .company-img {
 				background-image: url(../img/dpd.png);
-				@media all and (max-width: 768px) {
+				@media all and (max-width: $brec-point1) {
 					background-image: url(../img/dpd1.png);
 				}
 			}
 			&:nth-child(5) .company-img {
 				background-image: url(../img/pony.png);
-				@media all and (max-width: 768px) {
+				@media all and (max-width: $brec-point1) {
 					background-image: url(../img/pony1.png);
 				}
 			}
 			&:nth-child(6) .company-img {
 				background-image: url(../img/spsr.png);
-				@media all and (max-width: 768px) {
+				@media all and (max-width: $brec-point1) {
 					background-image: url(../img/spsr1.png);
 				}
 			}
 			&:nth-child(7) {			
-				@media all and (max-width: 320px) {
+				@media all and (max-width: $brec-point2) {
 					display: none;
 				}
 				.company-img {
 					background-image: url(../img/tnt.png);
-					@media all and (max-width: 768px) {
+					@media all and (max-width: $brec-point1) {
 						background-image: url(../img/tnt1.png);
 					}
-					@media all and (max-width: 320px) {
+					@media all and (max-width: $brec-point2) {
 						background-image: url(../img/ups1.png);
 						
 					}
@@ -1238,16 +1244,16 @@ body{
 			}
 			
 			&:nth-child(8){			
-				@media all and (max-width: 320px) {
+				@media all and (max-width: $brec-point2) {
 					display: none;
 				}
 				.company-img {
 					background-image: url(../img/ups.png);
-					@media all and (max-width: 768px) {
+					@media all and (max-width: $brec-point1) {
 						background-image: url(../img/ups1.png);
 					}
 
-					@media all and (max-width: 320px) {
+					@media all and (max-width: $brec-point2) {
 						background-image: url(../img/ups1.png);
 						
 					}
@@ -1260,14 +1266,14 @@ body{
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			flex-wrap: wrap;
 		}
 	}
 	&-img{
 		width: 94px;
 		height: 60px;
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			width: 66px;
 			height: 42px;
 		}
@@ -1275,7 +1281,7 @@ body{
 }
 .burder{
 	display: none;
-	@media all and (max-width: 320px) {
+	@media all and (max-width: $brec-point2) {
 		display: block;
 		position: relative;
 		width: 40px;
@@ -1328,7 +1334,7 @@ body{
 		padding-top: 31px;
 		padding-bottom: 22px;
 		background-color: #E9E9E9;
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			padding: 20px 15px 15px 15px;
 		}
 	}
@@ -1338,44 +1344,44 @@ body{
 		width: 1170px;
 		background-color: #C4C4C4;
 		margin-left: -5px;
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			width: 721px;
 		}
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			width: 291px;
 		}
 	}
 	&_row1{
 		display: flex;
 		justify-content: space-between;
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			display: block;
 		}
 		.btn{
-			@media all and (max-width: 768px) {
+			@media all and (max-width: $brec-point1) {
 				width: 220px;
 			}
-			@media all and (max-width: 320px) {
+			@media all and (max-width: $brec-point2) {
 				width: 290px;
 			}
 		}
 		.h_3{
-			@media all and (max-width: 768px) {
+			@media all and (max-width: $brec-point1) {
 				@include font-common(20px,24px);
 			}
-			@media all and (max-width: 320px) {
+			@media all and (max-width: $brec-point2) {
 				@include font-common(18px,22px);
 				margin-bottom: 15px;
 			}
 		}
 		.rut .h.h_5.h_c_1.btn{
 			display: none;
-			@media all and (max-width: 320px) {
+			@media all and (max-width: $brec-point2) {
 				display: flex;
 			}
 		}
 		.h.h_5.h_c_1.btn{
-			@media all and (max-width: 320px) {
+			@media all and (max-width: $brec-point2) {
 				display: none;
 			}
 
@@ -1395,7 +1401,7 @@ body{
 		width: 160px;
 		height: 48px;
 		background-image: url(../img/send1.png);
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			width: 99px;
 			height: 30px;
 			background-image: url(../img/send12.png);
@@ -1410,19 +1416,19 @@ body{
 		a {
 			margin: 0 15px;
 		}
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			@include font-common(12px,14px);
 			grid-template-columns: 28% 7% 42% 14%;
 			padding-top: 22px;
     		padding-bottom: 0px;
 		}
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			@include font-common(10px,12px);
-			grid-template-columns: 61% 10% 42% 0%;
+			grid-template-columns: 61% 10% 29% 0%;
 			
 		}
 		&_nav{
-			@media all and (max-width: 320px) {
+			@media all and (max-width: $brec-point2) {
 				display: none;
 			}
 		}
@@ -1435,7 +1441,7 @@ body{
 	}
 	&-burder{
 		display: none;
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			display: block;
 			position: relative;
 			width: 40px;
@@ -1470,7 +1476,7 @@ body{
 	}
 	&_nav{
 		margin-top: 0;
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			display: none;
 		}
 	}
@@ -1483,11 +1489,11 @@ body{
 		background: #E9E9E9;
 		margin-top: 0px;
 		margin-bottom: 0px;
-		@media all and (max-width: 768px) {
+		@media all and (max-width: $brec-point1) {
 			@include font-common(14px,17px);
 			width: 220px;
 		}
-		@media all and (max-width: 320px) {
+		@media all and (max-width: $brec-point2) {
 			width: 290px;
 			margin-bottom: 10px;
 		}

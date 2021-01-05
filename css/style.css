@@ -295,6 +295,7 @@ body {
   .header-wrap.active {
     background-color: #FFFFFF;
     background-image: none;
+    height: 616px;
   }
 }
 
@@ -346,18 +347,19 @@ body {
 @media all and (max-width: 450px) {
   .header-menu {
     position: fixed;
-    left: 0;
     top: 74px;
     width: 100%;
     height: 530px;
     background-color: #FFFFFF;
-    padding: 0px 10px 20px 10px;
+    padding: 0px 10px 20px 0px;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
     display: none;
   }
   .header-menu.active {
     display: block;
+    width: 320px;
+    margin: 0 auto;
   }
 }
 
@@ -383,7 +385,7 @@ body {
   .header-nav {
     display: block;
     text-align: left;
-    padding-left: 10px;
+    padding-left: 0px;
   }
   .header-nav li {
     margin: 0px 0px 20px 0px;
@@ -454,13 +456,19 @@ body {
 }
 
 .header-questions-cloud {
-  left: -10px;
-  position: absolute;
+  position: fixed;
   background-color: rgba(0, 0, 0, 0.2);
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
   height: 100vh;
-  width: 450px;
+  width: 100vw;
+  display: none;
+}
+
+@media all and (max-width: 450px) {
+  .header-questions-cloud.active {
+    display: block;
+  }
 }
 
 .header-logo {

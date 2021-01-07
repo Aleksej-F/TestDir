@@ -1,8 +1,8 @@
 
 @import "_header";
 $width-wrap: 1440px;
-$brec-point1: 900px;
-$brec-point2: 450px;
+$brec-point1: 788px;
+$brec-point2: 340px;
 $color-text-1: #008DCD;
 $color-text-1_1: #94D1EC;
 $color-text-2: #FFCC00;
@@ -190,6 +190,8 @@ body{
 				background-color: #FFFFFF;
 				background-image: none;
 				height: 616px;
+				position: fixed;
+				z-index: 20;
 			}
 		}
 	}
@@ -224,14 +226,15 @@ body{
 	&-menu{
 		@media all and (max-width: $brec-point2) {
 			position: fixed;
-			
+			left: 0;
 			top: 74px;
 			width: 100%;
 			height: 530px;
 			background-color: #FFFFFF;
-			padding: 0px 10px 20px 0px;
+			padding: 0px 10px 20px 21px;
 			transition: all 0.3s ease 0s;
 			display: none;
+			z-index: 10;
 			&.active {
 				display: block;
 				width: 320px;
@@ -306,13 +309,14 @@ body{
 			width: 280px;
 		}
 		&-cloud{
-			
+			top: 300px;
 			position: fixed;
 			background-color: rgba(0, 0, 0, 0.2);
 			backdrop-filter: blur(15px);
 			height: 100vh;
 			width: 100vw;
 			display: none;
+			z-index: 7;
 			@media all and (max-width: $brec-point2) {
 				&.active{
 					display: block;

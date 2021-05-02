@@ -1,8 +1,24 @@
 
+@font-face {
+	font-family: "MyriadProRegular";
+	src: url("../fonts/MyriadProRegular/MyriadProRegular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "MyriadProBold";
+	src: url("../fonts/MyriadProBold/MyriadProBold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
 @import "_header";
+
 $width-wrap: 1440px;
-$brec-point1: 788px;
-$brec-point2: 340px;
+$brec-point1: 1440px;
+$brec-point2: 788px;
 $color-text-1: #008DCD;
 $color-text-1_1: #94D1EC;
 $color-text-2: #FFCC00;
@@ -81,7 +97,8 @@ body{
 	font-weight: 300;
 	&_1{
 		@include font-common(48px, 58px);
-		font-family: "MyriadProBold";
+		font-weight: 300;
+		/*font-family: "MyriadProBold";*/
 		@media all and (max-width: $brec-point1) {
 			@include font-common(44px, 53px);
 		}

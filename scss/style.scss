@@ -14,7 +14,7 @@
 	font-display: swap;
 }
 
-@import "_header";
+
 
 $width-wrap: 1440px;
 $brec-point1: 1440px;
@@ -207,10 +207,20 @@ body{
 				background-color: #FFFFFF;
 				background-image: none;
 				height: 616px;
-				position: fixed;
 				z-index: 20;
 			}
 		}
+	}
+	&-shell{
+		@media all and (max-width: $brec-point2) {
+			&.active {
+				margin: auto;
+					
+			}	
+		}
+	}
+	&_consent{
+		margin-right: 10px;
 	}
 	&-h{
 		margin-top: 88px;
@@ -238,11 +248,20 @@ body{
 	&-row{
 		display: flex;
 		justify-content:space-between;
-		
+		@media all and (max-width: $brec-point2) {
+			&.active {
+				width: 320px;
+				flex-wrap: wrap;
+				position: fixed;
+				top: 60;
+				z-index: 10;
+				background-color: #ffffff;
+			}	
+		}
 	}
 	&-menu{
 		@media all and (max-width: $brec-point2) {
-			position: fixed;
+			
 			left: 0;
 			top: 74px;
 			width: 100%;
@@ -326,7 +345,7 @@ body{
 			width: 280px;
 		}
 		&-cloud{
-			top: 300px;
+			top: 0px;
 			position: fixed;
 			background-color: rgba(0, 0, 0, 0.2);
 			backdrop-filter: blur(15px);

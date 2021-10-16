@@ -378,7 +378,7 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     position: fixed;
-    top: 60;
+    top: 0;
     z-index: 10;
     background-color: #ffffff;
   }
@@ -2281,4 +2281,3 @@ input::-webkit-input-placeholder {
   border: 1px solid #9E9E9E;
   background-color: #E9E9E9;
 }
-/*# sourceMappingURL=style.css.map */
